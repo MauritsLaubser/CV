@@ -1,0 +1,36 @@
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 18px;
+  /* Family: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk)
+- Weights: 500 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
