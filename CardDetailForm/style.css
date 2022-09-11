@@ -15,6 +15,7 @@ body {
 .container {
   display: flex;
   flex-direction: row;
+  height: 95vh;
 }
 
 .attribution {
@@ -29,6 +30,9 @@ body {
   position: absolute;
   bottom: 20%;
   left: 20%;
+  width: 100%;
+  height: 247px;
+  width: 447px;
 }
 
 .card-cvc {
@@ -40,8 +44,8 @@ body {
 
 .card-front {
   position: absolute;
-  top: 20%;
-  left: 15%;
+  top: 15vh;
+  left: 15vw;
 }
 
 .card-logo {
@@ -84,12 +88,18 @@ body {
   border: none;
 }
 
+.left-side-images {
+  height: 95vh;
+  width: 60vw;
+  background-image: url("./images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+}
+
 .rightSelf {
   justify-self: end;
 }
 
 .right-side-input {
-  padding-left: 5%;
   width: 100%;
 }
 
@@ -153,4 +163,40 @@ body {
 
 .halfWidth {
   width: 50%;
+}
+
+@media screen and (max-width: 1300px) {
+  .left-side-images {
+    width: 100%;
+    height: 30vh;
+    background-image: url("./images/bg-main-mobile.png");
+    background-repeat: repeat;
+    z-index: -3;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+  }
+  .card-front {
+    top: 5%;
+    left: 2%;
+    z-index: -1;
+  }
+  .card-back {
+    top: 2%;
+    right: 2%;
+    z-index: -2;
+  }
+  .right-side-input {
+    padding: 30px 0;
+  }
+  .inputContainer {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .inputContainer {
+    width: 80%;
+  }
 }
