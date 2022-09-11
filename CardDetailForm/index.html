@@ -27,43 +27,83 @@
   <body>
     <div class="container">
       <div class="left-side-images">
-        <img src="/images/bg-main-desktop.png" alt="left side bar" />
-        <img
-          src="/images/bg-card-front.png"
-          alt="card-front"
-          class="card-front"
-        />
-        <img src="/images/bg-card-back.png" alt="card-back" class="card-back" />
+        <img src="./images/bg-main-desktop.png" alt="left side bar" />
+        <div class="card-front">
+          <img src="./images/bg-card-front.png" alt="card-front" />
+          <img src="./images/card-logo.svg" alt="card-logo" class="card-logo" />
+          <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+          <p class="card-name" id="card-name">Name Surname</p>
+          <p class="card-date" id="card-date">00/00</p>
+        </div>
+        <div class="card-back">
+          <img src="./images/bg-card-back.png" alt="card-back" />
+          <p class="card-cvc" id="card-cvc">000</p>
+        </div>
       </div>
+      <form class="right-side-input center flex" id="input-form">
+        <div class="inputContainer center flex col-dir">
+          <label class="leftSelf">CARDHOLDER NAME</label>
+          <input
+            type="text"
+            class="input fullwidth"
+            id="CARDHOLDERNAME"
+            maxlength="25"
+          />
+          <div class="fullwidth errorDiv" id="card-name-error">
+            <p>Card name cannot be blank</p>
+          </div>
+          <label class="leftSelf">CARD NUMBER</label>
+          <input
+            type="text"
+            class="input fullwidth"
+            id="CARDNUMBER"
+            maxlength="19"
+          />
+          <div class="fullwidth errorDiv" id="card-number-error">
+            <p>Card number can only be numbers</p>
+          </div>
+          <div class="fullwidth center flex">
+            <div class="halfWidth">
+              <label class="leftSelf">EXP. DATE (MM/YY)</label>
+              <div class="fullwidth center flex">
+                <input
+                  type="text"
+                  class="halfWidth input"
+                  id="CARDMONTH"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  class="halfWidth input"
+                  id="CARDYEAR"
+                  maxlength="2"
+                />
+              </div>
+            </div>
+            <div class="halfWidth">
+              <label class="leftSelf">CVC</label>
+              <input
+                type="text"
+                class="fullwidth input"
+                id="CARDCVC"
+                maxlength="3"
+              />
+            </div>
+          </div>
+          <div class="fullwidth flex" id="card-error-date-cvc">
+            <div class="halfWidth errorDiv" id="card-date-error">
+              <p>Incorrect date</p>
+            </div>
+            <div class="halfWidth errorDiv rightSelf" id="card-cvc-error">
+              <p>CVC can only be numbers</p>
+            </div>
+          </div>
+          <button class="card-submit" id="card-submit" type="submit">
+            SUBMIT
+          </button>
+        </div>
+      </form>
     </div>
-
-    <!-- 0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  Completed state start
-
-  Thank you!
-  We've added your card details
-  Continue -->
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
@@ -73,5 +113,6 @@
         >Maurits Laubser</a
       >.
     </div>
+    <script src="./assets/main.js"></script>
   </body>
 </html>

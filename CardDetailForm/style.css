@@ -1,3 +1,5 @@
+/* colors */
+
 * {
   font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
@@ -25,12 +27,130 @@ body {
 
 .card-back {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 20%;
+  left: 20%;
+}
+
+.card-cvc {
+  top: 36%;
+  right: 12.5%;
+  position: absolute;
+  color: white;
 }
 
 .card-front {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  top: 20%;
+  left: 15%;
+}
+
+.card-logo {
+  top: 30px;
+  left: 30px;
+  position: absolute;
+}
+
+.card-number {
+  bottom: 25%;
+  left: 5%;
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+}
+
+.card-name {
+  bottom: 10%;
+  left: 5%;
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.card-date {
+  bottom: 10%;
+  right: 5%;
+  position: absolute;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.card-submit {
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  color: white;
+  border: none;
+}
+
+.rightSelf {
+  justify-self: end;
+}
+
+.right-side-input {
+  padding-left: 5%;
+  width: 100%;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+
+.col-dir {
+  flex-direction: column;
+}
+
+.inputContainer {
+  width: 50%;
+  height: 50%;
+  padding: 10px 15px;
+}
+
+.input {
+  border-radius: 10px;
+  padding: 10px 15px;
+  background-color: #ffffff00;
+  box-sizing: border-box;
+  margin: 10px 0px;
+  /* border: 2px solid black; */
+}
+
+.error {
+  border: 2px solid hsl(0, 100%, 66%);
+}
+
+.input:focus {
+  outline: none;
+
+  border: 2px inset hsl(249, 99%, 64%);
+}
+
+.errorDiv > * {
+  margin: 0;
+}
+.errorDiv > p {
+  color: hsl(0, 100%, 66%);
+}
+
+.none {
+  display: none;
+}
+
+.leftSelf {
+  align-self: flex-start;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.halfWidth {
+  width: 50%;
 }
